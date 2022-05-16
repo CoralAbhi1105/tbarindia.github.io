@@ -1,0 +1,135 @@
+/* banner */
+#banner{position: relative; height: calc(100vh - 125px); margin: 0 auto;}
+#banner .item{height: calc(100vh - 125px); background-size: cover; background-repeat: no-repeat; background-position:  center top;  position: relative; border-radius: 0 0 100px 100px;}
+#banner .item.last{background-position: 85% top;}
+#banner .banner-caption{position: absolute; width: 1410px; z-index: 2; margin: 0 auto; left: 0; right: 0; top: 50%; transform: translateY(-50%); }
+#banner .banner-caption .title{ font-family: var(--titleFont_1); color: var(--color_white); font-size: 4.688rem; line-height: 1.1; margin-bottom: 10px; text-shadow: 0px 3px 2.55px rgba(0, 0, 0, 1); text-transform: uppercase;}
+#banner .banner-caption .sub-title{font-weight: 400; color: var(--color_white); font-size: 1.7rem; text-shadow: 0px 3px 2.55px rgba(0, 0, 0, 1);}
+#banner .owl-nav {position: absolute; top: 50%; transform: translateY(-50%); width: 100%;}
+#banner .owl-nav button.owl-prev,#banner .owl-nav button.owl-next{position: absolute; height: 75px; width: 75px; background-color: rgba(0, 0, 0, 0.5); border-radius: 50%;}
+#banner .owl-nav button.owl-prev:focus,#banner .owl-nav button.owl-next:focus{outline: none;}
+#banner .owl-nav button.owl-prev{left: 70px;}
+#banner .owl-nav button.owl-prev:before,#banner .owl-nav button.owl-next:before{content: ""; background-image: url(../images/sprite.png); background-repeat: no-repeat; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;  width: 11px; height: 19px; filter: invert(100%) sepia(0%) saturate(7%) hue-rotate(150deg) brightness(101%) contrast(100%);}
+#banner .owl-nav button.owl-prev:before{ background-position: -6px -5px;}
+#banner .owl-nav button.owl-next:before{ background-position: -23px -5px;}
+#banner .owl-nav button.owl-next{right: 70px;}
+#banner .owl-nav button.owl-prev:hover,#banner .owl-nav button.owl-next:hover{background-color:rgba(0, 0, 0, 0.7); outline: none;}
+
+/*.down-arrow{position: absolute; z-index: 10; width: 25px; left: 0; right: 0; bottom:60px;  margin:0 auto; text-align: center; }
+.down-arrow .circle{width: 25px; height: 40px; border: 1px solid var(--color_white); border-radius: 12px; display: block; overflow: hidden;}
+.down-arrow .icon{background-position: -213px -7px; width: 10px; height: 18px;display: block; margin: 10px auto 0;}  
+.down-arrow img{margin: 0 auto; }
+.bounce {display: inline-block;background: url(../images/dimond.png) no-repeat center top;width: 10px; height: 10px; margin: 0 auto;-moz-animation: bounce 2s infinite;-webkit-animation: bounce 2s infinite;animation: bounce 2s infinite;}
+@keyframes bounce { from {transform: translateY(0); opactiy:0; } to {transform: translateY(15px); opactiy:1;}}
+@-webkit-keyframes bounce { from {-webkit-transform: translateY(0); opactiy:0;} to {-webkit-transform: translateY(15px); opactiy:1;}}
+@-moz-keyframes bounce {from {-moz-transform: translateY(0); opactiy:0;} to {-moz-transform: translateY(15px); opactiy:1;}}*/
+.down-arrow{position: absolute; z-index: 2; width: 25px; left: 0; right: 0; bottom:30px;  margin:0 auto; text-align: center;}
+.down-arrow .circle{width: 25px; height: 40px; border: 1px solid #fff; border-radius: 12px; display: block; overflow: hidden;}
+.down-arrow .icon{background-position: -20px -6px; width: 8px; height: 17px;display: block; margin: 10px auto 0;}  
+.down-arrow img{margin: 0 auto; }
+.bounce {display: inline-block; background-color: var(--color_white); border-radius: 50%; width: 7px; height: 7px; margin: 0 auto;-moz-animation: bounce 2s infinite;-webkit-animation: bounce 2s infinite;animation: bounce 2s infinite;}
+@keyframes bounce { from {transform: translateY(0); opactiy:0; } to {transform: translateY(15px); opactiy:1;}}
+@-webkit-keyframes bounce { from {-webkit-transform: translateY(0); opactiy:0;} to {-webkit-transform: translateY(15px); opactiy:1;}}
+@-moz-keyframes bounce {from {-moz-transform: translateY(0); opactiy:0;} to {-moz-transform: translateY(15px); opactiy:1;}}
+
+
+.custom-animated {position: absolute; left: 0; right: 0; bottom: 30px; margin: 0 auto; text-align: center; width: 25px; z-index: 2;}
+.custom-animated:hover{color: transparent;}
+.custom-animated__angle {color: var(--color_white); font-size: 1rem; line-height: normal; vertical-align: middle; position: relative; -webkit-animation: blink 1s infinite; animation: blink 1s infinite; display: block;}
+.custom-animated__angle--1 {top: 25px; -webkit-animation-delay: 0.1s; animation-delay: 0.1s;}
+.custom-animated__angle--2 {top: 16px; -webkit-animation-delay: 0.3s; animation-delay: 0.3s;}
+.custom-animated__angle--3 {top: 7px; -webkit-animation-delay: 0.5s; animation-delay: 0.5s;}
+@-webkit-keyframes blink { from { opacity: 1;} to { opacity: 0.4;} }
+@keyframes blink { from { opacity: 1; } to { opacity: 0.4;} }
+@-moz-keyframes blink {from { opacity: 1; } to { opacity: 0.4;} }
+
+
+/* middle-block */
+#middle-block{}
+#middle-block .item{position: relative; height: 250px;}
+#middle-block .item:after{content: ""; background: url(../images/divider.png) no-repeat  right top; position: absolute; right: 0; width: 1px; height: 250px; top:50%; transform: translateY(-50%);}
+#middle-block  .row [class^="col-"]:last-child .item:after{display: none;}
+#middle-block .item .icon{min-height: 65px; margin-bottom: 20px; display: flex; flex-direction: column; justify-content: flex-end; filter:var(--imgPrimary_1);}
+#middle-block .item .text{font-family: var(--titleFont_2); color: var(--primary_1); font-size: 1.25rem; font-weight: 700;}
+#middle-block .item:hover .text{color:var(--primary_5);}
+#middle-block .item:hover .icon{filter:var(--imgPrimary_5);}
+
+/* about-us */
+#about-us{background: url(../images/about-bg.jpg) no-repeat center top; background-size: cover; min-height: 705px;}
+#about-us .about-pic{background-image: url(../images/about-bg-pattern.png); background-repeat: no-repeat; background-position: center top; height: 662px; background-size: cover; position: relative;}
+#about-us .about-pic img{position: absolute; top:50%; transform: translateY(-50%); left: 0; right: 0; margin: 0 auto;}
+#about-us .about-content p{font-size: 1.125rem; color: var(--color_black);}
+#about-us .about-content .btn-cust{background-color: var(--primary_1); color: var(--primary_4);}
+#about-us .about-content .btn-cust:hover{color: var(--color_white);}
+#about-us .about-content .btn-cust .arrow{filter:var(--imgPrimary_4);}
+#about-us .about-content .btn-cust:hover .arrow{filter:var(--imgColor_white);}
+
+
+/* what-we-offer */
+#what-we-offer{position: relative;}
+#what-we-offer:before{content: ""; position: absolute; left: 0; top: 0; background: url(../images/dcc-shape01.png) no-repeat 0 0; width: 254px; height: 183px;}
+#what-we-offer:after{content: ""; position: absolute; right: 0; bottom: 0; background: url(../images/dcc-shape02.png) no-repeat 0 0; width: 525px; height: 110px;}
+#what-we-offer .sub-title{font-size: 1.125rem;}
+#offer-slider {margin-top: 100px; margin-bottom: 50px;}
+#offer-slider .item *{transition: all .3s linear;}
+#offer-slider .item .chai-info1{background: #ffffff;
+background: -moz-linear-gradient(top,  #ffffff 0%, #fffcf9 25%, #fefaf0 75%, #fef6e3 100%);
+background: -webkit-linear-gradient(top,  #ffffff 0%,#fffcf9 25%,#fefaf0 75%,#fef6e3 100%);
+background: linear-gradient(to bottom,  #ffffff 0%,#fffcf9 25%,#fefaf0 75%,#fef6e3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fef6e3',GradientType=0 );
+min-height: 340px; position: relative; display: block; text-decoration: none; position: relative;
+text-align: center; padding: 0 20px 100px; margin-top: 50px;}
+#offer-slider .item .chai-info{min-height: 340px; position: relative; display: block; text-decoration: none; position: relative;
+text-align: center; padding: 0 20px 100px; margin-top: 50px; background: url(../images/offer-shadow.jpg) repeat-x left bottom;}
+#offer-slider .item .chai-info .img-wrap{margin:0 auto 30px; height: 170px;  position: absolute; left: 0; right: 0;}
+#offer-slider .item .chai-info .img-wrap img{width: auto;}
+#offer-slider .item .chai-info span{display: block;color:var(--color_black);}
+#offer-slider .item .chai-info .info{position: absolute; left: 0; right: 0; bottom: 0; height: calc(100% - 255px);}
+#offer-slider .item .chai-info .type{font-size: 1.063rem; line-height: 1;}
+#offer-slider .item .chai-info .name{font-family: var(--titleFont_2); font-weight: 700; font-size: 1.25rem; display: block;}
+#offer-slider .item:hover .chai-info2{background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #fff4de 25%, #ffe3ad 50%, #ffd27a 75%, #ffc95f 100%);
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#fff4de 25%,#ffe3ad 50%,#ffd27a 75%,#ffc95f 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#fff4de 25%,#ffe3ad 50%,#ffd27a 75%,#ffc95f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffc95f',GradientType=0 );    
+}
+#offer-slider .item:hover .chai-info{background: url(../images/offer-shadow-hover.jpg) repeat-x left bottom;}
+#offer-slider .item:hover .chai-info span{color: var(--primary_1);}
+#offer-slider .item:hover .img-wrap img{transform: scale(1.4);}
+#offer-slider .item:hover .chai-info .type{font-size: 1.25rem;}
+#offer-slider .item:hover .chai-info .name{font-size: 1.313rem;}
+#offer-slider .owl-dots{text-align: center;position: absolute; left: 0; right: 0; bottom: -80px;}
+#offer-slider .owl-dots .owl-dot{outline: none;}
+#offer-slider .owl-dots .owl-dot span{margin: 0 3px; width: 10px; height: 5px; background-color: var(--primary_4); transition: all .3s linear; display: inline-block; border-radius: 30px;}
+#offer-slider .owl-dots .owl-dot.active span{background-color: var(--primary_3); width: 20px;}
+#offer-slider .owl-nav{position: absolute; top:50%; transform: translateY(-50%); width: 100%;}
+#offer-slider .owl-nav button{width: 40px; height: 40px; background-color: var(--primary_4); border-radius: 10px; position: absolute; outline: none;}
+#offer-slider .owl-nav button::before{content: ""; background-image: url(../images/sprite.png); background-repeat: no-repeat; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; width: 11px; height: 19px;}
+#offer-slider .owl-nav button.owl-prev{left: -20px;}
+#offer-slider .owl-nav button.owl-prev::before{background-position: -6px -5px;}
+#offer-slider .owl-nav button.owl-next{right: -20px;}
+#offer-slider .owl-nav button.owl-next::before{background-position: -23px -5px;}
+
+
+#benefits{background: url(../images/benefits-bg.jpg) no-repeat center top; min-height: 725px; background-color: var(--primary_3);}
+#benefits h2.title:hover{color:var(--primary_5);}
+#benefits p{font-size: 1.125rem;}
+#benefits .img-wrap{position: relative; margin-left: 120px;}
+#benefits .img-wrap .large-pic img{border-radius: var(--border-radius-10);}
+#benefits .img-wrap .small-pic{position: absolute; background-color: var(--color_white); left: -90px; bottom: -100px; border: 10px solid var(--color_white);border-radius: var(--border-radius-10);}
+#benefits .img-wrap .text{position: absolute; text-transform: uppercase; left: -68px; top:50%; transform: translateY(-50%); width: 136px; text-align: center;  display: inline-flex; align-items: center; justify-content: center; height: 136px; border-radius: 50%; background-color: var(--primary_3); font-family: var(--titleFont_1); color:var(--primary_1); font-size:1.375rem; line-height: 1.1;}
+
+.benefit-list{margin-top:40px;}
+.benefit-list .item {margin-bottom: 13px;}
+.benefit-list .icon div{width: 55px; height: 55px; line-height: 53px; border: 1px solid var(--primary_1); border-radius: 50%; margin-right: 20px; text-align: center; flex-shrink: 0;}
+.benefit-list .icon .immunity-level-icon{background-position: -4px -52px; width: 25px; height: 27px;}
+.benefit-list .icon .metabolism-icon{background-position: -35px -52px; width: 26px; height: 26px;}
+.benefit-list .icon .immunity-booster-icon{background-position: -68px -52px; width: 21px; height: 26px;}
+.benefit-list .icon .sugar-control-icon{background-position: -95px -53px; width: 24px; height: 24px;}
+.benefit-list .icon .anti-oxidant-icon{background-position:  -124px -52px; width: 27px; height: 27px;}
+.benefit-list .icon .improves-icon{background-position: -157px -54px; width: 26px; height: 22px;}
+.benefit-list .icon .caffeine-icon{background-position: -189px -51px; width: 28px; height: 28px;}
+
+.benefit-list .item:hover .icon div{border-color: var(--primary_5);}
+.benefit-list .text{font-size: 1rem; font-weight: 700; text-transform: uppercase;}
+.benefit-list .text:hover{color:var(--primary_5);}
