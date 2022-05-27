@@ -72,7 +72,6 @@
                             <div id="career_error" class="career_error error-inline mb-4" style="display: none;"></div>
                             <div id="career_success" class="career_success alert alert-success" style="display: none;">
                             </div>
-                            <!-- <form id="frmCareer" name="frmCareer" method="post" class="career-form" enctype="multipart/form-data"> -->
                             <form id="frmInquiry" name="contactform" method="post" class="inquiry-form" action="">
                                 <div class="row">
                                     <div class="col-md-6 col-lg-6">
@@ -159,23 +158,6 @@
             </div>
         </section>
 
-        <script>
-            const scriptURIA = "https://script.google.com/macros/s/AKfycbwUKfFPq7ayIumdWsac3axeaM47j8f-8Caee1NINQHEiZenFrJTmrz63Io0Ya31v7Ztew/exec";
-            const forums = document.forms["contactforms"];
-            let inputesa = document.querySelectorAll('input');
-
-
-            forums.addEventListener("submit", (e) => {
-                e.preventDefault();
-                fetch(scriptURIA, { method: "POST", body: new FormData(forums) })
-                    .then((response) =>
-                        swal("Thank you", "We will contact you soon!", "success")
-                    )
-                    .catch((error) => console.error("Error!, Try Again Later"));
-                inputesa.forEach(input => input.value = '');
-            });
-        </script>
-
 
 
 
@@ -192,7 +174,7 @@
                                 </div>
                                 <div id="inquiry_success" class="inquiry_success alert alert-success"
                                     style="display: none;"></div>
-                                <form id="frmInquiry" name="contactform" method="post" class="inquiry-form" action="">
+                                <form id="frmInquiry" name="footerForm" method="post" class="inquiry-form" action="">
                                     <div class="row">
                                         <div class="col-md-6 col-lg-6">
                                             <div class="form-group">
@@ -250,26 +232,6 @@
                                 </form>
                             </div>
 
-
-
-                            <script>
-                                const scriptURL = "https://script.google.com/macros/s/AKfycbwUKfFPq7ayIumdWsac3axeaM47j8f-8Caee1NINQHEiZenFrJTmrz63Io0Ya31v7Ztew/exec";
-                                const form = document.forms["contactform"];
-                                let inputs = document.querySelectorAll('input');
-
-
-                                form.addEventListener("submit", (e) => {
-                                    e.preventDefault();
-                                    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-                                        .then((response) =>
-                                            swal("Thank you", "We will contact you soon!", "success")
-                                        )
-                                        .catch((error) => console.error("Error!, Try Again Later"));
-                                    inputs.forEach(input => input.value = '');
-                                });
-                            </script>
-
-
                         </div>
 
                         <div class="col-sm-12 col-md-6 col-lg-4 offset-lg-2">
@@ -287,10 +249,13 @@
                                         target="_blank">8909-014-906</a>
                                 </li>
                                 <li><span class="icon"><i class="sprite email"></i></span>
-                                    <h4>General / Franchisee Enquiries</h4><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlDTWZSvxMdfLqvBjSSNzppfpbdgCsNhBDXrDnMTWQGTcgGnDwRDnBwRhqPLMrfVJSsNFg" target="_blank">jb.india2k19@gmail.com</a>
+                                    <h4>General / Franchisee Enquiries</h4><a
+                                        href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlDTWZSvxMdfLqvBjSSNzppfpbdgCsNhBDXrDnMTWQGTcgGnDwRDnBwRhqPLMrfVJSsNFg"
+                                        target="_blank">jb.india2k19@gmail.com</a>
                                 </li>
-                                <li class="map-link"><span class="icon"><i class="sprite map"></i></span><a href="page-contact-us.html#map"
-                                        title="Upcoming Feature">Find us on map<i class="sprite arrow"></i></a></li>
+                                <li class="map-link"><span class="icon"><i class="sprite map"></i></span><a
+                                        href="page-contact-us.html#map" title="Upcoming Feature">Find us on map<i
+                                            class="sprite arrow"></i></a></li>
                             </ul>
                             <div class="social-share">
                                 <a href="https://www.instagram.com/tbarindia/" class="tw" data-toggle="tooltip"
@@ -416,7 +381,7 @@
 
     <script>
         const scriptURI = "https://script.google.com/macros/s/AKfycbwUKfFPq7ayIumdWsac3axeaM47j8f-8Caee1NINQHEiZenFrJTmrz63Io0Ya31v7Ztew/exec";
-        const forum = document.forms["contactforms"];
+        const forum = document.forms["footerForm"];
         let inputes = document.querySelectorAll('input');
 
 
@@ -429,7 +394,48 @@
                 .catch((error) => console.error("Error!, Try Again Later"));
             inputes.forEach(input => input.value = '');
         });
+    </script> 
+
+
+
+
+
+
+
+    <script>
+        const scriptURIA = "https://script.google.com/macros/s/AKfycbwUKfFPq7ayIumdWsac3axeaM47j8f-8Caee1NINQHEiZenFrJTmrz63Io0Ya31v7Ztew/exec";
+        const forums = document.forms["contactforms"];
+        let inputesa = document.querySelectorAll('input');
+
+
+        forums.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURIA, { method: "POST", body: new FormData(forums) })
+                .then((response) =>
+                    swal("Thank you", "We will contact you soon!", "success")
+                )
+                .catch((error) => console.error("Error!, Try Again Later"));
+            inputesa.forEach(input => input.value = '');
+        });
     </script>
+
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwUKfFPq7ayIumdWsac3axeaM47j8f-8Caee1NINQHEiZenFrJTmrz63Io0Ya31v7Ztew/exec";
+        const form = document.forms["contactform"];
+        let inputs = document.querySelectorAll('input');
+
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) =>
+                    swal("Thank you", "We will contact you soon!", "success")
+                )
+                .catch((error) => console.error("Error!, Try Again Later"));
+            inputs.forEach(input => input.value = '');
+        });
+    </script>
+
 
 
 </body>
