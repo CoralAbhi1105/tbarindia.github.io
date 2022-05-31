@@ -26,7 +26,7 @@
 <body>
     <div id="mobile-menu"></div>
     <div id="wrapper">
-        <!-- start header -->
+        <!-- start headnuer -->
         <nav class="navbar navbar-expand-lg tra sticky-top">
             <div class="container">
                 <a href="index.html" class="navbar-brand p-0"><img src="images/dcc-logo.png" alt="T-Bar Logo"
@@ -43,8 +43,7 @@
                 <li class="nav-item"><a href="page-join-us.html" class="nav-link tra">Join Us</a></li> -->
                         <li class="nav-item"><a href="page-career.html" class="nav-link tra">Career</a></li>
                         <li class="nav-item"><a href="page-contact-us.html" class="nav-link tra">Contact Us</a></li>
-                        <li class="nav-item franchisee-link ml-5"><a data-toggle="modal" data-target="#be-a-franchisee"
-                                href="javascript:;" class="nav-link tra">Be a Franchisee</a></li>
+                        <li class="nav-item franchisee-link"><a data-toggle="modal" data-target="#be-a-franchisee" class="nav-link tra">Be a Franchisee</a></li>
                     </ul>
                 </div>
                 <a href="javascript:;" id="mobile-menu-icon"><span></span></a>
@@ -435,6 +434,7 @@
         <script src="scripts/all-scripts.js"></script>
         <script src="scripts/common.js"></script>
     </div>
+
     <div class="modal fade" id="master-franchisee" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -442,25 +442,27 @@
                     <h5 class="modal-title">Master Franchisee</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body">
 
                     <div class="mf-block white-bg">
                         <div id="mf_error" class="mf_error error-inline mb-4" style="display: none;"></div>
                         <div id="mf_success" class="mf_success alert alert-success" style="display: none;"></div>
-                        <form id="frmMasterFranchise" name="frmMasterFranchise" method="post" class="mf-form"
-                            enctype="multipart/form-data">
+
+                        <form id="frmUnitFranchise" name="contactmasfran" method="post" class="uf-form inquiry-form"
+                            action="">
                             <div class="row">
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Full name</legend>
-                                        <input type="text" id="txtMFName" name="txtMFName" class="form-control"
+                                        <input type="text" id="txtMFName" name="name" required class="form-control"
                                             placeholder="Your full name*">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Email</legend>
-                                        <input type="text" id="txtMFEmail" name="txtMFEmail" class="form-control"
+                                        <input type="text" id="txtMFEmail" name="email" required class="form-control"
                                             placeholder="Your email*">
                                     </fieldset>
                                 </div>
@@ -469,15 +471,15 @@
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Contact number</legend>
-                                        <input type="text" id="txtMFMobile" name="txtMFMobile" class="form-control"
+                                        <input type="text" id="txtMFMobile" name="number" required class="form-control"
                                             placeholder="Your mobile number*">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Profession</legend>
-                                        <input type="text" id="txtMFProfession" name="txtMFProfession"
-                                            class="form-control" placeholder="Your Profession*">
+                                        <input type="text" id="txtMFProfession" name="profession" required class="form-control"
+                                            placeholder="Your Profession*">
                                     </fieldset>
                                 </div>
                             </div>
@@ -485,14 +487,14 @@
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Experience</legend>
-                                        <input type="text" id="txtMFExperience" name="txtMFExperience"
-                                            class="form-control" placeholder="Your experience*">
+                                        <input type="text" id="txtMFExperience" name="experience" required class="form-control"
+                                            placeholder="Your experience*">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Desired Location for Master Franchise / City</legend>
-                                        <input type="text" id="txtMFCity" name="txtMFCity" class="form-control"
+                                        <input type="text" id="txtMFCity" name="location" required class="form-control"
                                             placeholder="Your City*">
                                     </fieldset>
                                 </div>
@@ -501,11 +503,11 @@
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>State</legend>
-                                        <input type="text" id="txtMFState" name="txtMFState" class="form-control"
+                                        <input type="text" id="txtMFState" name="state" required class="form-control"
                                             placeholder="Your State*">
                                     </fieldset>
                                 </div>
-                                <div class="col-md-6 col-lg-6">
+                                <!-- <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group custom-file">
                                         <legend>Upload Business Profile</legend>
                                         <input type="file" name="txtBusinessProfile"
@@ -513,31 +515,56 @@
                                         <label class="form-control custom-file-label" for="customFile">Upload your
                                             profile</label>
                                     </fieldset>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <fieldset class="form-group">
                                         <legend>Message</legend>
-                                        <textarea class="form-control" id="txtMFAdditionalInfo"
-                                            name="txtMFAdditionalInfo" placeholder="Additional Information"></textarea>
+                                        <textarea class="form-control" id="txtMFAdditionalInfo" required name="addinfo"
+                                            placeholder="Additional Information"></textarea>
                                     </fieldset>
                                 </div>
                             </div>
+<br>
+                            <div class="row justify-content-center">
+                                <button type="submit" class="btn btn-cust mt-0">Submit now <span
+                                        class="sprite arrow"></span></button>
+                            </div>
 
-                    </div><br>
-
-                    <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-cust mt-0">Submit now <span
-                                class="sprite arrow"></span></button>
+                        </form>
                     </div>
-
-                    </form>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
+
+
+    <script>
+        const scriptmasfran = "https://script.google.com/macros/s/AKfycbwUKfFPq7ayIumdWsac3axeaM47j8f-8Caee1NINQHEiZenFrJTmrz63Io0Ya31v7Ztew/exec";
+        const contactmasfran = document.forms["contactmasfran"];
+        let inputmasfran = document.querySelectorAll('input');
+
+
+        contactmasfran.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptmasfran, { method: "POST", body: new FormData(contactmasfran) })
+                .then((response) =>
+                    swal("Thank you", "We will contact you soon!", "success")
+                )
+                .catch((error) => console.error("Error!, Try Again Later"));
+                inputmasfran.forEach(input => input.value = '');
+        });
+    </script>
+
+
+
+
+
+
+
+
 
 
     <div class="modal fade" id="unit-franchisee" tabindex="-1" role="dialog">
@@ -552,20 +579,21 @@
                     <div class="uf-block white-bg">
                         <div id="uf_error" class="uf_error error-inline mb-4" style="display: none;"></div>
                         <div id="uf_success" class="uf_success alert alert-success" style="display: none;"></div>
-                        <form id="frmUnitFranchise" name="frmUnitFranchise" method="post" class="uf-form inquiry-form"
-                            enctype="multipart/form-data">
+
+                        <form id="frmUnitFranchise" name="contactformunitf" method="post" class="uf-form inquiry-form"
+                            action="">
                             <div class="row">
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Full name</legend>
-                                        <input type="text" id="txtUFName" name="txtUFName" class="form-control"
+                                        <input type="text" id="txtUFName" name="name" required class="form-control"
                                             placeholder="Your full name*">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Email</legend>
-                                        <input type="text" id="txtUFEmail" name="txtUFEmail" class="form-control"
+                                        <input type="text" id="txtUFEmail" name="email" required class="form-control"
                                             placeholder="Your email*">
                                     </fieldset>
                                 </div>
@@ -574,15 +602,15 @@
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Contact number</legend>
-                                        <input type="text" id="txtUFMobile" name="txtUFMobile" class="form-control"
+                                        <input type="text" id="txtUFMobile" name="number" required class="form-control"
                                             placeholder="Your mobile number*">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Profession</legend>
-                                        <input type="text" id="txtUFProfession" name="txtUFProfession"
-                                            class="form-control" placeholder="Your profession*">
+                                        <input type="text" id="txtUFProfession" name="profession" required class="form-control"
+                                            placeholder="Your profession*">
                                     </fieldset>
                                 </div>
                             </div>
@@ -591,7 +619,7 @@
                                     <fieldset class="form-group">
                                         <legend>Your Model Preference</legend>
                                         <select id="cmbModelPreference" class="form-control js-example-basic-single"
-                                            name="cmbModelPreference">
+                                            name="finterest">
                                             <option value="">Select your model preference</option>
                                             <option value="Indoor Kiosk">Indoor Kiosk</option>
                                             <option value="Outdoor Kiosk">Outdoor Kiosk</option>
@@ -602,7 +630,7 @@
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>Desired Location for Unit Franchise / City</legend>
-                                        <input type="text" id="txtUFCity" name="txtUFCity" class="form-control"
+                                        <input type="text" id="txtUFCity" name="location" required class="form-control"
                                             placeholder="Your City*">
                                     </fieldset>
                                 </div>
@@ -611,7 +639,7 @@
                                 <div class="col-md-6 col-lg-6">
                                     <fieldset class="form-group">
                                         <legend>State</legend>
-                                        <input type="text" id="txtUFState" name="txtUFState" class="form-control"
+                                        <input type="text" id="txtUFState" name="state" required class="form-control"
                                             placeholder="Your State*">
                                     </fieldset>
                                 </div>
@@ -620,8 +648,8 @@
                                 <div class="col">
                                     <fieldset class="form-group">
                                         <legend>Message</legend>
-                                        <textarea class="form-control" id="txtUFAdditionalInfo"
-                                            name="txtUFAdditionalInfo" placeholder="Additional Information"></textarea>
+                                        <textarea class="form-control" id="txtUFAdditionalInfo" required name="addinfo"
+                                            placeholder="Additional Information"></textarea>
                                     </fieldset>
                                 </div>
                             </div>
@@ -639,6 +667,25 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        const scriptunitf = "https://script.google.com/macros/s/AKfycbwUKfFPq7ayIumdWsac3axeaM47j8f-8Caee1NINQHEiZenFrJTmrz63Io0Ya31v7Ztew/exec";
+        const formunitf = document.forms["contactformunitf"];
+        let inputunitf = document.querySelectorAll('input');
+
+
+        formunitf.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptunitf, { method: "POST", body: new FormData(formunitf) })
+                .then((response) =>
+                    swal("Thank you", "We will contact you soon!", "success")
+                )
+                .catch((error) => console.error("Error!, Try Again Later"));
+            inputunitf.forEach(input => input.value = '');
+        });
+    </script>
+
 
 
 
